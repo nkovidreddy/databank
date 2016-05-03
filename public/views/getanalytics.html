@@ -1,0 +1,342 @@
+
+<!Doctype html>
+<html>
+<head>
+	<script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
+    <style>
+        .button {
+            
+            background: #e3722e;
+            background: -webkit-gradient(linear, left top, left bottom, from(#e3722e), to(#e3722e));
+            
+            
+            
+            
+            font-size: 13px;
+            font-family: "Times New Roman", Georgia, Serif;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+            .button:hover {
+                border-top-color: #000000;
+                background: #cd853f;
+                color: #000000;
+            }
+
+            .button:active {
+                border-top-color:#e3722e ;
+                background:#e3722e;
+
+        .element {
+            width: 8em;
+            height: 2em;
+            border: 0.1em solid  ;
+            border-radius: 0.5em;
+            background-color: #ffffff;
+			margin-top: 5px;
+			margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body >
+ <div id = "Div1" >
+    <form style="margin-left: 250px;padding:50px;margin-top: 100px;border: 1px solid;border-radius: 5px;width: 750px" >
+    <p style="margin-left: 260px; font-size: 28px;">USER DETAILS</p>
+    </br>
+     <b>   Customer ID     <input type="text" name="customerID" style="border-radius: 5px;margin-left: 20px" /> </b>
+	<table style="padding: 20px">
+	<tr>
+	<td>Age</td>
+	<td style="padding-left: 10px"><input type="text" name="number" id="age" size="10" maxlength="2" style="width: 182px;height: 13px;border-radius: 5px"  /></td>
+	<td style="padding-left: 60px">Contact</td>
+	<td style="padding-left: 10px "><label class="desc" id="title25" for="Field" >
+	
+	 <span id="req_25" class="req"> </span>
+	</label>
+    <span>
+	<input id="Field"name="Field" type="tel" class="field text" value size="3" maxlength="3" tabindex="14" onekeyp="handleInput(this);" onchange="handleInput(this);" style="border-radius: 5px" >
+	<label for="Field"></label>
+	</span>
+	<span class="symbol">-</span>
+	<span>
+	<input id="Field-1"name="Field-1" type="tel" class="field text" value size="3" maxlength="3" tabindex="14" onekeyp="handleInput(this);" onchange="handleInput(this);" style="border-radius: 5px" >
+	<label for="Field-1"></label>
+	</span>
+	<span>
+	<input id="Field-2"name="Field-2" type="tel" class="field text" value size="4" maxlength="4" tabindex="16" onekeyp="handleInput(this);" onchange="handleInput(this);" style="border-radius: 5px" >
+	<label for="Field-2"> </label>
+	</span>
+    </td>
+	</tr>
+	<tr>
+	<td>Education Status</td>
+	<td style="padding-left: 10px"><select id="myselect" class="element" style="width: 186px;border-radius: 5px">
+	    <option value=null>Select</option>
+            <option value="Basic4thYear">Basic 4th Year</option>
+            <option value="Basic6thYear">Basic 6th Year</option>
+            <option value="High School">High School</option>
+            <option value="Illiterate">Illiterate</option>
+            <option value="ProfessionalCourse">Professional Course</option>
+            <option value="Bachelors">Bachelors</option>
+            <option value="Masters">Masters</option>
+           </select>
+           </td> 
+    <td style="padding-left: 60px">Last Contacted Before </td>
+    <td style="padding-left: 10px"><input type="date" class="element" id="pdays" style="height: 13mypx;width: 182px;border-radius: 5px" /></td> 
+	<!--<td style="padding-left: 10px"><input type="number" class="element" min="-1" id="pdays" style="height: 13mypx;width: 182px;border-radius: 5px" /></td> -->
+	</tr>
+	
+	<tr>
+	<td>Marital Status</td>
+	<td style="padding-left: 10px"><select id="myselect" class="element" style="width: 186px;border-radius: 5px">
+	    <option value=null>Select</option>
+	        <option value="Married">Married</option>
+	        <option value="Single">Single</option>
+            <option value="Divorced">Divorced/Widowed</option> 
+            </select> 
+          </td>  
+    <td style="padding-left: 60px">Personal Loan</td>
+	<td style="padding-left: 10px"><select id="myselect" class="element" style="height: 21px;width: 186px;border-radius: 5px">
+	    <option value=null>Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            
+            </select>
+            </td>
+	</tr>
+	<tr>
+	<td>Job</td>
+	<td style="padding-left: 10px"><select id="myselect" class="element" style="height: 21px;width: 186px;border-radius: 5px">
+	    <option value=null>Select</option>
+            <option value="Management">Management</option>
+            <option value="Technician">Technician</option>
+            <option value="Enterpreneur">Enterpreneur</option>
+            <option value="Blue-Collar">Blue-Collar</option>
+            
+            <option value="Retired">Retired</option>
+            <option value="Admin">Admin</option>
+            <option value="Service">Service</option>
+            <option value="SelfEmployeed">Self Employed</option>
+            <option value="Unemployee">Unemployee</option>
+            <option value="Housemaid">House Maid</option>
+            <option value="Student">Student</option>     
+          </select>
+          </td> 
+    <td style="padding-left: 60px">Housing Loan</td>
+	<td style="padding-left: 10px"><select id="myselect" class="element" style="height: 21px;width: 186px;border-radius: 5px">
+	    <option value=null>Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option> 
+            </select>
+	</td>     
+	</tr>
+	<tr>
+	<td>Credit Default</td>
+	<td style="padding-left: 10px"><select id="myselect" class="element" style="height: 21px;width: 186px;border-radius: 5px">
+	    <option value=null>Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            
+            </select>
+	</td>
+	<td style="padding-left: 60px">Previous Attempts :</td>
+	<td style="padding-left: 10px"><input type="text" name="number" id="Previous attempts" size="10" maxlength="4" style="height: 15px;border-radius: 5px;width: 182px"/></td>
+	</tr>
+	<tr>
+	<td>Balance</td>
+	<td style="padding-left: 10px"><input type="text" name="number" id="balance" size="10" maxlength="12" style="width: 182px;border-radius: 5px" /></td>
+	<td style="padding-left: 60px">Previous Outcome :</td>
+    
+    <td style="padding-left: 10px"><select id="myselect" class="element" style="width: 186px;height: 21px;border-radius: 5px">
+            <option value=null>---Select---</option>
+	        <option value="Failure">Failure</option>
+            <option value="Other">Other</option>
+            <option value="Sucess">Sucess</option>
+            </td>
+	</tr>
+	<tr>
+	</table>
+	<input class="button" type="button" value="Get Analytics" style="margin-left: 300px;margin-top: 30px;height: 31px;width: 116px;border-radius: 5px; font-weight: bold" onclick="switchVisible();"/>
+	</form>
+
+</div>
+<div style="margin-left:300px;margin-top:80px;margin-right:300px;display: none;" id = "Div2">
+       <form style="border: 1px solid; padding:20px; border-radius: 5px">
+        <table class="tab" >
+        <tr>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Logistic Regression" onclick="regression()" style="border-radius: 5px;width: 191px;height: 31px" />
+        <p id="regress">Output :<br />Scored Probability : </p></td>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Support Vector Machine" onclick="supportvm()" style="border-radius: 5px;width: 191px;height: 31px" />
+        <p id="svm">Output :<br />Scored Probability : </p></td>     
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Neural Networks" onclick="neuralnet()" style="border-radius: 5px;width: 191px;height: 31px" />
+        <p id="neural">Output :<br />Scored Probability : </p></td>  
+        </tr>
+        <tr>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Boosted Decision Tree" onclick="dectree()" style="border-radius: 5px;width: 191px;height: 31px" />
+        <p id="boost">Output :<br />Scored Probability : </p></td>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Decision Forest" onclick="deciforest()" style="border-radius: 5px;width: 191px;height: 31px"/>
+        <p id="regress">Output :<br />Scored Probability : </p></td>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Decision Jungle" onclick="decjungle()" style="border-radius: 5px;width: 191px;height: 31px"/>
+        <p id="jungle">Output :<br />Scored Probability : </p></td>
+        </tr>
+
+  </table>
+  <input class="button" type="button" value="View Analytics" style="margin-left: 300px;margin-top: 30px;height: 31px;width: 116px;border-radius: 5px; font-weight: bold" onclick="switchVisible();"/>
+  </form>
+
+
+    
+</body>
+
+</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+   var age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign;
+   function switchVisible() {
+            if (document.getElementById('Div1')) {
+
+                if (document.getElementById('Div1').style.display == 'none') {
+                    document.getElementById('Div1').style.display = 'block';
+                    document.getElementById('Div2').style.display = 'none';
+                }
+                else {
+                    document.getElementById('Div1').style.display = 'none';
+                    document.getElementById('Div2').style.display = 'block';
+                }
+            }
+}
+function decjungle()
+{
+	get_output();
+	var url="jungle.php";
+	var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+	output=remove_tags(output);
+	obj=JSON.parse(output);
+	var fin='';
+	fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+	fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+	document.getElementById("jungle").innerHTML=fin;
+
+}
+function dectree()
+{
+	get_output();
+	var url="boosted.php";
+	var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+	output=remove_tags(output);
+	obj=JSON.parse(output);
+	var fin='';
+	fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+	fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+	document.getElementById("boost").innerHTML=fin;
+
+}
+function neuralnet()
+{
+	get_output();
+	var url="neural.php";
+	var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+	output=remove_tags(output);
+	obj=JSON.parse(output);
+	var fin='';
+	fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+	fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+	document.getElementById("neural").innerHTML=fin;
+
+}
+function supportvm()
+{
+	get_output();
+	var url="svm.php";
+	var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+	output=remove_tags(output);
+	obj=JSON.parse(output);
+	var fin='';
+	fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+	fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+	document.getElementById("svm").innerHTML=fin;
+
+}
+
+function remove_tags(html)
+		{
+		   var tmp = document.createElement("DIV");
+		   tmp.innerHTML = html;
+		   return tmp.textContent || tmp.innerText || "";
+		}
+function get_output()
+{
+	age=document.getElementById("age").value;
+	 job=document.getElementById("job").value;
+	 marital=document.getElementById("marital").value;
+	 education=document.getElementById("education").value;
+	 loan=document.getElementById("loan").value;
+	 default1=document.getElementById("default").value;
+	 campaign=document.getElementById("campaign").value;
+	 previous=document.getElementById("previous").value;
+	 pdays=document.getElementById("pdays").value;
+	 duration=document.getElementById("duration").value;
+	 balance=document.getElementById("balance").value;
+	 contact=document.getElementById("contact").value;
+	 housing=document.getElementById("housing").value;
+	 day=document.getElementById("day").value;
+	 poutcome=document.getElementById("poutcome").value;
+	
+	index=document.getElementById("myselect").selectedIndex;
+
+	
+}
+function regression()
+{
+	get_output();
+	var url="regression.php";
+	var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+	output=remove_tags(output);
+	obj=JSON.parse(output);
+	var fin='';
+	fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+	fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+	document.getElementById("regress").innerHTML=fin;
+
+}
+function deciforest()
+{
+	get_output();
+	var url="decforest.php";
+	var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+	console.log(output);
+	output=remove_tags(output);
+	obj=JSON.parse(output);
+	var fin='';
+	fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+	fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+	document.getElementById("decisforest").innerHTML=fin;
+
+}
+function test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url)
+	{  
+	
+        
+		var ret;
+        $.ajax({
+            url: url,
+            data: {age:age,default1:default1,campaign:campaign,job:job,duration:duration,day:day,month:month,poutcome:poutcome,pdays:pdays,balance:balance,loan:loan,education:education,housing:housing,contact:contact,marital:marital,previous:previous},
+			async:false,
+            type: "GET",
+
+            success: function (d) {
+			console.log("result obtained.");
+					ret=d;
+             
+            },
+
+            error: function (xhr, status, error) {
+                if (xhr.status > 0) callback("error");
+            }
+        });
+		return ret;
+	}
+ 
+</script>

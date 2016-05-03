@@ -6,32 +6,26 @@ angular.module('routerRoutes', ['ngRoute'])
 $routeProvider
 
 
-// route for the home page
+// route for the index page
+ 	.when('/index', {
+ 	templateUrl : '/index.html',
+ 	controller : 'mainController',
+ 	controllerAs: 'main'
+ 	})
+
  	.when('/home', {
- 	templateUrl : 'views/pages/home.html',
+ 	templateUrl : '/home.html',
  	controller : 'homeController',
  	controllerAs: 'home'
  	})
 
  // route for the about page
- 	.when('/about', {
- 	templateUrl : 'views/pages/about.html',
-	controller : 'aboutController',
-	controllerAs: 'about'
-	})
-
- // route for the contact page
-	.when('/contact', {
-	templateUrl : 'views/pages/contact.html',
-	controller : 'contactController',
-	controllerAs: 'contact'
-	})
-
-.when('/remedies', {
-	templateUrl : 'views/pages/Rem.html',
-	controller : 'contactController',
-	controllerAs: 'contact'
+ 	.when('/getanalytics', {
+ 	templateUrl : '/getanalytics.html',
+	controller : 'analyticsController',
+	controllerAs: 'analytics'
 	});
+
  // set our app up to have pretty URLS
 $locationProvider.html5Mode(true);
 });

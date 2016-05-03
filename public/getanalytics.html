@@ -1,0 +1,435 @@
+<!Doctype html>
+<html ng-app="masters">
+
+<head>
+    <!-- <script type="text/javascript" src="js2/bootstrap-filestyle.min.js"> </script> -->
+    <style>
+    #header{
+        text-align: right;
+    }
+        .button {
+            
+            background: #e3722e;
+            background: -webkit-gradient(linear, left top, left bottom, from(#e3722e), to(#e3722e));
+            font-size: 13px;
+            font-family: "Times New Roman", Georgia, Serif;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+            .button:hover {
+                border-top-color: #000000;
+                background: #cd853f;
+                color: #000000;
+            }
+
+            .button:active {
+                border-top-color:#e3722e ;
+                background:#e3722e;
+
+        .element {
+            width: 8em;
+            height: 2em;
+            border: 0.1em solid  ;
+            border-radius: 0.5em;
+            background-color: #ffffff;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+    <!-- 
+    Compass Template
+    http://www.templatemo.com/tm-454-compass
+    -->
+    <meta charset="UTF-8">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- CSS Bootstrap & Custom -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/templatemo-misc.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo-main.css">
+    <link rel="stylesheet" type="text/css" href="css/cardio.css">
+        
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
+     <script src="js/app.routes.js"></script>
+     <script src="js/app.js"></script>
+    
+</head>
+<body class="container" ng-controller="analyticsController as analytics">
+<div id="home">
+        <div class="site-header">
+            <div class="top-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="left-header">
+                                <span><i class="fa fa-phone"></i>080 080 0990</span>
+                                <span><i class="fa fa-envelope"></i>info@sjsu.com</span>
+                            </div> <!-- /.left-header -->
+                        </div> <!-- /.col-md-6 -->
+                        <div class="col-md-6 col-sm-6">
+                            <div class="right-header text-right">
+                                <ul class="social-icons">
+                                    <li><a href="#" class="Signin">Sign In</a></li>
+                                    <li><a href="#" class="Signin">SignUp</a></li>
+
+                                </ul>
+                            </div> <!-- /.left-header -->
+                        </div> <!-- /.col-md-6 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- /.top-header -->
+            <div class="main-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-6">
+                            <div class="logo">
+                                <h1><a href="#" title="Dreri">UNI BANK</a></h1>
+                            </div> <!-- /.logo -->
+                        </div> <!-- /.col-md-4 -->
+                        <div class="col-md-8 col-sm-8 col-xs-6">
+                            <div class="menu text-right hidden-sm hidden-xs">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="index.html">GetAnalytics</a></li>
+                                    <li><a href="index.html">Algorithms</a></li>
+                                    <li><a href="/infographs">InfoGraphs</a></li>
+                                    <li><a href="index.html">Contact</a></li>
+                                </ul>
+                            </div> <!-- /.menu -->
+                        </div> <!-- /.col-md-8 -->
+                    </div> <!-- /.row -->
+                    <div class="responsive-menu text-right visible-xs visible-sm">
+                        <a href="#" class="toggle-menu fa fa-bars"></a>
+                        <div class="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html">GetAnalytics</a></li>
+                                <li><a href="index.html">Algorithms</a></li>
+                                <li><a href="/infographs">InfoGraphs</a></li>
+                                <li><a href="index.html">Contact</a></li>
+                            </ul>
+                        </div> <!-- /.menu -->
+                    </div> <!-- /.responsive-menu -->
+                </div> <!-- /.container -->
+            </div> <!-- /.header -->
+        </div> <!-- /.site-header -->
+    </div> <!-- /#home -->
+ <div id = "Div1" class="section-content" style="margin:auto">
+    <form role="form" style="margin-left: 270px;padding:20px;margin-top: 150px;border: 1px solid;border-radius: 5px;width: 750px; background-color: white" ng-submit="analytics.getAnalysis()" >
+    <div id = "header">
+    <h6>Euribor Rates* : <input type="text" name="number" id="age" size="10" maxlength="6" style="width: 102px;height: 32px;border-radius: 5px;padding: 10px;" ng-model="analytics.euribor"/>   </h6>
+    </div> 
+    <p style="margin-left: 230px; font-size: 28px;">CUSTOMER DETAILS</p>
+    </br>
+     <b>   Customer ID       <input type="text" name="customerID" style="border-radius: 5px;margin-left: 10px;margin-bottom: 10px" ng-model="analytics.customerId"/> </b>
+    <table >
+    <tr>
+    <td>Age</td>
+    <td style="padding-left: 10px"><input type="text" name="number" id="age" size="10" maxlength="2" style="width: 186px;height: 21px;border-radius: 5px;"  /></td>
+    <td style="padding-left: 60px">Contact*</td>
+    <td style="padding-left: 10px "><label class="desc" id="title25" for="Field" >
+    
+     <span id="req_25" class="req"> </span>
+    </label>
+    <span>
+    <select id="myselect" class="element" style="width: 186px;border-radius: 5px" ng-model="analytics.contacttype">
+        <option value=null>Select</option>
+            <option value="Telephone">Telephone</option>
+            <option value="Cellular" selected>Cellular</option>
+           </select>
+    </span>
+    
+    </td>
+    </tr>
+    <tr>
+    <td>Education Status</td>
+    <td style="padding-left: 10px"><select id="myselect" class="element" style="width: 186px;border-radius: 5px">
+        <option value=null>Select</option>
+            <option value="Basic4thYear">Basic 4th Year</option>
+            <option value="Basic6thYear">Basic 6th Year</option>
+            <option value="High School">High School</option>
+            <option value="Illiterate">Illiterate</option>
+            <option value="ProfessionalCourse">Professional Course</option>
+            <option value="Bachelors">Bachelors</option>
+            <option value="Masters">Masters</option>
+           </select>
+           </td> 
+    <td style="padding-left: 60px">Last Contacted Before </td>
+    <td style="padding-left: 10px"><input type="date"  id="pdays" style="margin-left: 3px;height: 21px;width: 186px;border-radius: 5px" /></td> 
+    <!--<td style="padding-left: 10px"><input type="number" class="element" min="-1" id="pdays" style="height: 13mypx;width: 182px;border-radius: 5px" /></td> -->
+    </tr>
+    
+    <tr>
+    <td>Marital Status</td>
+    <td style="padding-left: 10px"><select id="myselect" class="element" style="width: 186px;border-radius: 5px">
+        <option value=null>Select</option>
+            <option value="Married">Married</option>
+            <option value="Single">Single</option>
+            <option value="Divorced">Divorced/Widowed</option> 
+            </select> 
+          </td>  
+    <td style="padding-left: 60px">Personal Loan</td>
+    <td style="padding-left: 13px"><select id="myselect" class="element" style="height: 21px;width: 186px;border-radius: 5px">
+        <option value=null>Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            
+            </select>
+            </td>
+    </tr>
+    <tr>
+    <td>Job*</td>
+    <td style="padding-left: 10px"><select id="myselect" class="element" style="height: 21px;width: 186px;border-radius: 5px" ng-model="analytics.job">
+            <option value="job_unknown" >Select</option>
+            <option value="job_management">Management</option>
+            <option value="job_technician">Technician</option>
+            <option value="job_entrepreneur">Enterpreneur</option>
+            <option value="job_blue-collar">Blue-Collar</option>
+            
+            <option value="job_retired">Retired</option>
+            <option value="job_admin.">Admin</option>
+            <option value="job_services">Service</option>
+            <option value="job_self-employed">Self Employed</option>
+            <option value="job_unemployed">Unemployed</option>
+            <option value="job_housemaid">House Maid</option>
+            <option value="job_student">Student</option>    
+            <option value="job_unknown">Unknown</option>    
+          </select>
+          </td> 
+    <td style="padding-left: 60px">Housing Loan</td>
+    <td style="padding-left: 13px"><select id="myselect" class="element" style="height: 21px;width: 186px;border-radius: 5px">
+        <option value=null>Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option> 
+            </select>
+    </td>     
+    </tr>
+    <tr>
+    <td>Credit Default*</td>
+    <td style="padding-left: 10px">
+        <select id="myselect" class="element" style="height: 21px;width: 186px;border-radius: 5px" ng-model="analytics.defaultVal">
+        <option value=null>Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            
+            </select>
+    </td>
+    <td style="padding-left: 60px">Previous Attempts* :</td>
+    <td style="padding-left: 13px"><input type="text" name="number" id="Previous attempts" size="10" maxlength="4" style="height: 21px;border-radius: 5px;width: 186px" ng-model="analytics.previousVal"/></td>
+    </tr>
+    <tr>
+    <td>Balance</td>
+    <td style="padding-left: 10px"><input type="text" name="number" id="balance" size="10" maxlength="12" style="width: 186px;height:21px;border-radius: 5px" /></td>
+    <td style="padding-left: 60px">Previous Outcome* :</td>
+    
+    <td style="padding-left: 13px"><select id="myselect" class="element" style="width: 186px;height: 21px;border-radius: 5px" ng-model="analytics.poutcome">
+            <option value=null>---Select---</option>
+            <option value="poutcome_failure">Failure</option>
+            <option value="poutcome_nonexistent">Other</option>
+            <option value="poutcome_success">Sucess</option>
+            </td>
+    </tr>
+    <tr>
+    </table>
+     <button type="submit" class="button" style="margin-left: 300px;margin-top: 30px;height: 31px;width: 116px;border-radius: 5px; font-weight: bold">Submit</button>
+     <h4>Score Result Class = {{scoreResLR}}</h4> 
+     <h4>Score Probability = {{scoreProbLR}}</h4>
+     <h4 ng-show="scoreResLR==1">You can call the customer<a href="tel:analytics.phnno"></br>Enter and Call Phone Number:<input ng-model="analytics.phnno"></input></a></h4>
+    <input class="button" type="button" value="View Comparision Results" style="margin-left: 300px;margin-top: 30px;height: 31px;width: 116px;border-radius: 5px; font-weight: bold" onclick="switchVisible();"/>
+
+   
+    </form>
+
+
+</div>
+
+<div style="margin-left:300px;margin-top:50px;margin-right:300px;display: none;" id = "Div2">
+       <div style="border : 1px solid; width:700px;border-radius: 5px;">
+       <form style="width:500px;padding:20px;  background-color: white">
+        <table class="tab" style="margin:auto; " >
+        <tr>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Logistic Regression" onclick="regression()" style="border-radius: 5px;width: 191px;height: 31px" />
+        <p id="regress">Output :{{scoreResLR}}<br />Scored Probability :{{scoreProbLR}} </p></td>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Support Vector Machine" onclick="supportvm()" style="border-radius: 5px;width: 191px;height: 31px" />
+        <p id="svm">Output :{{scoreResSVM}}<br />Scored Probability :{{scoreProbSVM}} </p></td>     
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Neural Networks" onclick="neuralnet()" style="border-radius: 5px;width: 191px;height: 31px" />
+        <p id="neural">Output :{{scoreResNN}}<br />Scored Probability :{{scoreProbNN}} </p></td>  
+        </tr>
+        <tr>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Boosted Decision Tree" onclick="dectree()" style="border-radius: 5px;width: 191px;height: 31px" />
+        <p id="boost">Output :{{scoreResDT}}<br />Scored Probability :{{scoreProbDT}} </p></td>
+        <td style="padding: 10px"><input id="clickMe" type="button" class="button" value=" Class Decision Forest" onclick="deciforest()" style="border-radius: 5px;width: 191px;height: 31px"/>
+        <p id="regress">Output :{{scoreResDF}}<br />Scored Probability :{{scoreProbDF}} </p></td>
+        </tr>
+
+  </table>
+  <input class="button" type="button" value="View Analytics" style="margin-left: 300px;margin-top: 30px;height: 31px;width: 116px;border-radius: 5px; font-weight: bold" onclick="switchVisible();"/>
+  </form>
+</div>
+</div>
+
+
+    
+</body>
+
+</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+   var age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign;
+   function switchVisible() {
+            if (document.getElementById('Div1')) {
+
+                if (document.getElementById('Div1').style.display == 'none') {
+                    document.getElementById('Div1').style.display = 'block';
+                    document.getElementById('Div2').style.display = 'none';
+                }
+                else {
+                    document.getElementById('Div1').style.display = 'block';
+                    document.getElementById('Div2').style.display = 'block';
+                }
+            }
+}
+function decjungle()
+{
+    get_output();
+    var url="jungle.php";
+    var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+    output=remove_tags(output);
+    obj=JSON.parse(output);
+    var fin='';
+    fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+    fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+    document.getElementById("jungle").innerHTML=fin;
+
+}
+function dectree()
+{
+    get_output();
+    var url="boosted.php";
+    var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+    output=remove_tags(output);
+    obj=JSON.parse(output);
+    var fin='';
+    fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+    fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+    document.getElementById("boost").innerHTML=fin;
+
+}
+function neuralnet()
+{
+    get_output();
+    var url="neural.php";
+    var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+    output=remove_tags(output);
+    obj=JSON.parse(output);
+    var fin='';
+    fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+    fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+    document.getElementById("neural").innerHTML=fin;
+
+}
+function supportvm()
+{
+    get_output();
+    var url="svm.php";
+    var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+    output=remove_tags(output);
+    obj=JSON.parse(output);
+    var fin='';
+    fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+    fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+    document.getElementById("svm").innerHTML=fin;
+
+}
+
+function remove_tags(html)
+        {
+           var tmp = document.createElement("DIV");
+           tmp.innerHTML = html;
+           return tmp.textContent || tmp.innerText || "";
+        }
+function get_output()
+{
+    age=document.getElementById("age").value;
+     job=document.getElementById("job").value;
+     marital=document.getElementById("marital").value;
+     education=document.getElementById("education").value;
+     loan=document.getElementById("loan").value;
+     default1=document.getElementById("default").value;
+     campaign=document.getElementById("campaign").value;
+     previous=document.getElementById("previous").value;
+     pdays=document.getElementById("pdays").value;
+     duration=document.getElementById("duration").value;
+     balance=document.getElementById("balance").value;
+     contact=document.getElementById("contact").value;
+     housing=document.getElementById("housing").value;
+     day=document.getElementById("day").value;
+     poutcome=document.getElementById("poutcome").value;
+    
+    index=document.getElementById("myselect").selectedIndex;
+
+    
+}
+function regression()
+{
+    get_output();
+    var url="regression.php";
+    var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+    output=remove_tags(output);
+    obj=JSON.parse(output);
+    var fin='';
+    fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+    fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+    document.getElementById("regress").innerHTML=fin;
+
+}
+function deciforest()
+{
+    get_output();
+    var url="decforest.php";
+    var output=test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url);
+    console.log(output);
+    output=remove_tags(output);
+    obj=JSON.parse(output);
+    var fin='';
+    fin="Output : "+obj.Results.output1.value.Values[0][17].toString()+"</br>";
+    fin=fin+"Scored probability : "+obj.Results.output1.value.Values[0][18].toString();
+    document.getElementById("decisforest").innerHTML=fin;
+
+}
+function test(age,month,poutcome,pdays,default1,balance,loan,job,marital,education,duration,housing,contact,day,previous,campaign,url)
+    {  
+    
+        
+        var ret;
+        $.ajax({
+            url: url,
+            data: {age:age,default1:default1,campaign:campaign,job:job,duration:duration,day:day,month:month,poutcome:poutcome,pdays:pdays,balance:balance,loan:loan,education:education,housing:housing,contact:contact,marital:marital,previous:previous},
+            async:false,
+            type: "GET",
+
+            success: function (d) {
+            console.log("result obtained.");
+                    ret=d;
+             
+            },
+
+            error: function (xhr, status, error) {
+                if (xhr.status > 0) callback("error");
+            }
+        });
+        return ret;
+    }
+ 
+</script>

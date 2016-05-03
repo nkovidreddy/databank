@@ -3,8 +3,13 @@
 def printCustom():
 	return 'test'
 
+def main():
+	resp=printCustom()
+	print(resp)
+
+
 if __name__ == '__main__':
-    print(printCustom())
-    print(printCustom())
-    print(printCustom())
-    print(printCustom())
+	main()
+	print('Testing')
+
+    
