@@ -180,7 +180,7 @@ $http(scoreValueReq4).then(function(data4){
 
  .controller('homeController', ['$scope',function($scope,$http){
     var vm=this;
-    vm.message="In home kovid";
+    vm.message="In home ";
     console.log("In Analytics home Controller");
     vm.getAnalysis=function(){
         console.log("Inside Get Analysis Function");
