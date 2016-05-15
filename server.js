@@ -41,8 +41,8 @@ app.get('/getanalytics', function(req, res) {
  res.sendFile(path.join(__dirname + '/public/getanalytics.html'));
  });
 
-app.get('/home', function(req, res) {
- res.sendFile(path.join(__dirname + '/public/home.html'));
+app.get('/infographs', function(req, res) {
+ res.sendFile(path.join(__dirname + '/public/infographs.html'));
  });
 
 //Configuring Routes
