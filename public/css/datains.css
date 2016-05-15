@@ -58,3 +58,15 @@
 				clear: none;
 			}
 		}
+
+.btn {
+    font-family: Bell MONOSPACE;
+    color: #ffffff;
+    font-size: 20px;
+    background: #e3722e;
+    margin-left: 150px;
+    text-align: center;
+    position: relative;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
